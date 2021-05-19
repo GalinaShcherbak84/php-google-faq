@@ -28,8 +28,10 @@
         </nav>
         <hr>
         <main>
+            <!-- array con le domande e risposte -->
             <?php 
-                $fags = [
+
+                $faqs = [
                     [
                         'question' => 'Come state implementando la recente decisione della Corte di giustizia dell\'Unione europea (CGUE) relativa al diritto all\'oblio?',
                         'answer' => 'La recente decisione della Corte di giustizia dell\'Unione europea ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi,
@@ -57,6 +59,11 @@
                     ],
                 ];
             ?>
+            <!-- domande e risposte -->
+            <?php foreach($faqs as $faq){ ?>
+                <h2> <?php echo $faq['question']; ?> </h2>
+                <p> <?php echo $faq['answer']; ?> </p>
+            <?php } ?>
         </main>
 
     </header>
